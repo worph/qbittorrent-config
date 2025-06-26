@@ -38,6 +38,7 @@ print(f'{encoded_salt}:{encoded_hash}')
 # Create minimal config
 cat > "$OUTPUT_DIR/qBittorrent.conf" << EOF
 [Preferences]
+Downloads\SavePath=/downloads
 WebUI\CSRFProtection=false
 WebUI\\Password_PBKDF2=@ByteArray($HASH_OUTPUT)
 WebUI\\Username=$QB_USERNAME
